@@ -1,3 +1,4 @@
+// ***** Test: Version1 *****
 function getParameterByName1(name){
 var results="";
 name=name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\");
