@@ -393,22 +393,25 @@ return results===null?"":encodeURIComponent(results[1].replace(/\+/g," "));
                     window.addEventListener('load', function(event){	
 					console.log('Before startTransactionalService');
                   window.wogaaCustom.startTransactionalService('HDBInfoWEBeServices-29'); 
-				  console.log('Before setTimeout firststep');
+				/*  
+			    console.log('Before setTimeout firststep');
 				  setTimeout(function(){
 					 window.wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29');   
 				  },1000);
 				    console.log('After setTimeout firststep');
+			    */
 				  });
 				  
 				  console.log('isIOS>>'+isIOS());
 				  if(isIOS()){
 					console.log('isIOS>>true');
-					
+					/*
 					console.log('Before setTimeout firststep');
 					setTimeout(function(){
 						wogaaCustom.startTransactionalService('HDBInfoWEBeServices-29'); 
 						wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29');   
 				  },1000);
+				  */
 				  }else{
 					   console.log('isIOS>>false');
 				  }
@@ -444,12 +447,16 @@ return results===null?"":encodeURIComponent(results[1].replace(/\+/g," "));
 if(window.addEventListener){
 				console.log('IF window.addEventListener true-laststep');
                     window.addEventListener('load', function(event){	
-					console.log('Before startTransactionalService-laststep');
+		
+			    console.log('Before startTransactionalService-laststep');
+			     window.wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29'); 
+			    /*
                   window.wogaaCustom.startTransactionalService('HDBInfoWEBeServices-29'); 
 				  console.log('Before setTimeout-laststep');
 				  setTimeout(function(){
 					 window.wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29');   
 				  },1000);
+				  */
 				    console.log('After setTimeout-laststep');
 				  });
 				  
@@ -458,10 +465,13 @@ if(window.addEventListener){
 					console.log('isIOS>laststep>true');
 					
 					console.log('Before setTimeout-laststep');
-					setTimeout(function(){
+					  wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29');   
+				  
+					/*
+					  setTimeout(function(){
 						wogaaCustom.startTransactionalService('HDBInfoWEBeServices-29'); 
 						wogaaCustom.completeTransactionalService('HDBInfoWEBeServices-29');   
-				  },1000);
+				  },1000);*/
 				  }else{
 					   console.log('isIOS>>false-laststep');
 				  }
