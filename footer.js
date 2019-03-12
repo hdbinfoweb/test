@@ -406,6 +406,7 @@ return results===null?"":encodeURIComponent(results[1].replace(/\+/g," "));
 				  console.log('isIOS>>'+isIOS());
 				  if(isIOS()){
 					console.log('isIOS>>true');
+					  wogaaCustom.startTransactionalService('HDBInfoWEBeServices-29'); 
 					/*
 					console.log('Before setTimeout firststep');
 					setTimeout(function(){
